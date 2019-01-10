@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 import cv2
 
-
-
-out = cv2.VideoWriter('train_output.avi',cv2.VideoWriter_fourcc('X', 'V', 'I', 'D'),25.0,(1294,720))
-
+out = cv2.VideoWriter('yourvideo.avi',cv2.VideoWriter_fourcc('X', 'V', 'I', 'D'),25.0,(1294,720))
 
 for i in reversed(range(51,892)):
         add = 'img/'+str(i)+'.jpg'

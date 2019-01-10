@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import cv2
-video='1080-2.avi'
+video='yourvideo.avi'
 
 cap = cv2.VideoCapture(video)
 
@@ -9,10 +9,10 @@ if cap.isOpened == False:
     print "Fail to open video"
 if cap.isOpened():
     while True:
-        ret,prev = cap.read()
+        ret,img = cap.read()
         if ret == True:
 	    if n%1 == 0:
-            	cv2.imwrite('img_new/'+str(n)+'.jpg',prev)
+            	cv2.imwrite('your_img_dir/'+str(n)+'.jpg',img)
             n=n+1
         else:
             break
